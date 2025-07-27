@@ -1,58 +1,85 @@
-TravelGram is a travel-themed social media web app that lets users share travel memories, explore destinations, and connect with other globetrotters.
+Learnify LMS
+A full stack Learning Management System (LMS) built with React, Node.js, Express, and MongoDB. This app allows instructors to create courses and students to enroll and track progress with a clean, responsive UI styled with Tailwind CSS.
 
-This is the frontend of the application, built with React, Vite, Tailwind CSS, and Framer Motion.
+Features
+User registration and login with role-based access (Students, Instructors)
 
-⚙️ Tech Stack
-React 18
+Course creation and management by instructors
 
-Vite
+Students can browse and enroll in courses
 
-Tailwind CSS
+Course detail pages with descriptions and enrollment functionality
 
-Framer Motion
+Responsive, modern frontend UI with React and Tailwind CSS
 
-Axios
+REST API backend using Express and MongoDB with Mongoose
 
-🚀 Getting Started
+JWT-based authentication and secure password hashing
+
+Technologies Used
+Frontend: React, React Router, Tailwind CSS
+
+Backend: Node.js, Express, MongoDB, Mongoose
+
+Authentication: JWT, bcryptjs
+
+Development Tools: npm, create-react-app
+
+
+
+Getting Started
 Prerequisites
-Node.js (v16+ recommended)
+Node.js and npm installed
 
-npm (v8+)
+MongoDB running locally or a cloud instance
 
-
-📁 Project Structure
-
-frontend/
-├─ src/
-│  ├─ App.jsx
-│  ├─ main.jsx
-│  └─ index.css
-├─ public/
-├─ index.html
-├─ vite.config.js
-├─ tailwind.config.js
-├─ package.json
-└─ README.md
+Installation
+Clone the repository:
 
 
-📡 API Integration
-Make sure the backend API is running. Update the base URL in your Axios config if needed.
+bash
+git clone https://github.com/Shabazkhan27/learnify.git
+cd learnify
+Backend setup:
 
-🛠️ Features (Planned or Implemented)
- User registration/login
 
- Photo upload with captions
+bash
+cd backend
+npm install
+Create a .env file in the backend folder with:
 
- User profiles and bio
 
- Explore feed with animations
+text
+MONGO_URI=mongodb://127.0.0.1:27017/learnify
+JWT_SECRET=your_jwt_secret
+Start the backend server:
 
- Likes/comments system
 
- Follow/unfollow users
+bash
+npm start
+Frontend setup:
 
-🙌 Contributions
-Feel free to fork this project and submit a pull request. If you find bugs or have feature requests, open an issue.
 
-📄 License
-This project is licensed under the MIT License.
+bash
+cd ../frontend
+npm install
+npm start
+Open your browser and visit:
+
+
+text
+http://localhost:3000
+
+
+learnify/
+├── backend/            # Backend source code and APIs
+│   ├── models/         # MongoDB models (User, Course)
+│   ├── routes/         # API routes (auth, courses)
+│   ├── server.js       # Backend server entry point
+│   └── .env            # Environment variables
+└── frontend/           # React frontend source code
+    ├── src/
+    │   ├── pages/      # React page components (Login, Signup, etc.)
+    │   ├── App.js      # Main app component with routing
+    │   └── index.js    # React entry point
+    └── tailwind.config.js  # Tailwind CSS config
